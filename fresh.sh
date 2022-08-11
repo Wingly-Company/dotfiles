@@ -24,33 +24,15 @@ pecl install memcached imagick
 $HOME/.composer/vendor/bin/valet install
 
 # Create a Sites directory
-# This is a default directory for macOS user accounts but doesn't comes pre-installed
 mkdir $HOME/Sites
-
-# Create sites subdirectories
-mkdir $HOME/Sites/laravel
 
 # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
 rm -rf $HOME/.zshrc
 ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 
-# Symlink vim prefs
-rm $HOME/.vimrc
-ln -s $HOME/.dotfiles/.vimrc $HOME/.vimrc
-rm $HOME/.vim
-ln -s $HOME/.dotfiles/.vim $HOME/.vim
-
-# Symlink .hushlogin
-rm -rf $HOME/.hushlogin
-ln -s $HOME/.dotfiles/.hushlogin $HOME/.hushlogin
-
 # Symlink .gitignore_global
 rm -rf $HOME/.gitignore_global
 ln -s $HOME/.dotfiles/.gitignore_global $HOME/.gitignore_global
 
-# Symlink the Mackup config file to the home directory
-ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
-
-# Set macOS preferences
-# We will run this last because this will reload the shell
-source .macos
+# Clone Github repositories
+$DOTFILES/clone.sh
