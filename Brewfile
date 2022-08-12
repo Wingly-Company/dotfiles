@@ -43,7 +43,7 @@ brew 'libmemcached'
 brew 'memcached'
 brew 'mysql'
 brew 'nginx'
-brew 'node'
+brew 'node@14'
 brew 'redis'
 brew 'yarn'
 
