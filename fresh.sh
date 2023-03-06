@@ -29,10 +29,10 @@ brew bundle --file ./Brewfile
 
 
 # Install PHP extensions with PECL
-pecl install memcached imagick
+pecl install imagick redis
 
 # Install global Composer packages
-/usr/local/bin/composer global require laravel/installer laravel/valet beyondcode/expose
+/usr/local/bin/composer global require laravel/installer laravel/valet
 
 # Install Laravel Valet
 $HOME/.composer/vendor/bin/valet install
